@@ -7,7 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements Animation.AnimationListener{
+public class MainActivity extends AppCompatActivity {
     // Animation
     private Animation animRotate1;
 
@@ -25,42 +25,10 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
                 R.anim.rotate);
 
         //set listener (VERY IMPORTANT, YOU FORGET nothing works!)
-        animRotate1.setAnimationListener(this);
+//        animRotate1.setAnimationListener(this);
     }
 
     public void doAnimate(View view) {
         myView.startAnimation(animRotate1);
-    }
-
-
-    /**
-     * <p>Notifies the start of the animation.</p>
-     *
-     * @param animation The started animation.
-     */
-    @Override
-    public void onAnimationStart(Animation animation) {
-
-    }
-
-    /**
-     * <p>Notifies the end of the animation. This callback is not invoked
-     * for animations with repeat count set to INFINITE.</p>
-     *
-     * @param animation The animation which reached its end.
-     */
-    @Override
-    public void onAnimationEnd(Animation animation) {
-
-    }
-
-    /**
-     * <p>Notifies the repetition of the animation.</p>
-     *
-     * @param animation The animation which was repeated.
-     */
-    @Override
-    public void onAnimationRepeat(Animation animation) {
-
     }
 }
