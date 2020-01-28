@@ -16,7 +16,7 @@
         android:src="@drawable/go"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:onClick="doAnimate1"/>
+        android:onClick="doAnimate"/>
 
     <Button
         android:layout_width="wrap_content"
