@@ -3,8 +3,10 @@ package com.materialapp1.example.perkins.animation_demo;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements Animation.AnimationListener {
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
     private ImageView myView;
 
+    Button but;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
         //hold on t
         myView = (ImageView)findViewById(R.id.imageView);
+        but = (Button)findViewById(R.id.button);
         // load the animation
         animRotate1 = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.rotate);
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
     public void doAnimate(View view) {
         animateit();
+        but.startAnimation(animRotate1);
     }
 
     public void doAnimate1(View view) {
