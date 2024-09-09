@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
     public void doAnimate(View view) {
         animateit();
-        but.startAnimation(animRotate1);
+//        but.startAnimation(animRotate1);
     }
 
     public void doAnimate1(View view) {
